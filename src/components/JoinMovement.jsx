@@ -1,83 +1,80 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { content } from '../config'
 import './JoinMovement.css'
 
 const JoinMovement = () => {
+  const [formData, setFormData] = useState({
+    email: '',
+    name: '',
+    location: ''
+  })
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('Form submitted:', formData)
+  }
+
   return (
     <section className="join-movement section">
       <div className="container">
-        <div className="section-header text-center mb-6">
-          <h2 className="section-title">
-            Join the <span className="highlight">Movement</span>
-          </h2>
-          <p className="section-subtitle">
-            Be part of a community that values authentic connections over superficial interactions.<br />
-            Start building meaningful relationships today.
-          </p>
-        </div>
-        
-        <div className="signup-form-container">
-          <form className="signup-form">
+        <div className="movement-content">
+          <h2 className="movement-title">{content.joinMovement.title}</h2>
+          <p className="movement-description">{content.joinMovement.description}</p>
+          
+          <form className="movement-form" onSubmit={handleSubmit}>
             <div className="form-row">
-              <input 
-                type="text" 
-                placeholder="First Name" 
+              <input
+                type="email"
+                name="email"
+                placeholder={content.joinMovement.form.emailPlaceholder}
+                value={formData.email}
+                onChange={handleInputChange}
                 className="form-input"
+                required
               />
-              <input 
-                type="text" 
-                placeholder="Last Name" 
+              <input
+                type="text"
+                name="name"
+                placeholder={content.joinMovement.form.namePlaceholder}
+                value={formData.name}
+                onChange={handleInputChange}
                 className="form-input"
+                required
+              />
+              <input
+                type="text"
+                name="location"
+                placeholder={content.joinMovement.form.locationPlaceholder}
+                value={formData.location}
+                onChange={handleInputChange}
+                className="form-input"
+                required
               />
             </div>
-            <div className="form-row">
-              <input 
-                type="email" 
-                placeholder="Email Address" 
-                className="form-input full-width"
-              />
-            </div>
-            <div className="form-row">
-              <select className="form-select">
-                <option>What are you looking for?</option>
-                <option>Friendship</option>
-                <option>Professional Network</option>
-                <option>Romantic Connection</option>
-                <option>Community</option>
-              </select>
-              <select className="form-select">
-                <option>Age Range</option>
-                <option>18-25</option>
-                <option>26-35</option>
-                <option>36-45</option>
-                <option>46+</option>
-              </select>
-              <select className="form-select">
-                <option>Location</option>
-                <option>New York</option>
-                <option>Los Angeles</option>
-                <option>Chicago</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <button type="submit" className="btn btn-primary submit-btn">
-              Start Building Connections
+            <button type="submit" className="btn btn-primary form-submit">
+              {content.joinMovement.form.submitButton}
             </button>
           </form>
-        </div>
-        
-        <div className="movement-stats">
-          <div className="stats-grid">
+          
+          <div className="movement-stats">
             <div className="stat-item">
-              <div className="stat-number">10K+</div>
-              <div className="stat-label">Active Members</div>
+              <div className="stat-value">{content.joinMovement.stats.science}</div>
+              <div className="stat-label">Approach</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">50K+</div>
-              <div className="stat-label">Connections Made</div>
+              <div className="stat-value">{content.joinMovement.stats.launch}</div>
+              <div className="stat-label">Launch</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">95%</div>
-              <div className="stat-label">Satisfaction Rate</div>
+              <div className="stat-value">{content.joinMovement.stats.access}</div>
+              <div className="stat-label">Beta</div>
             </div>
           </div>
         </div>

@@ -1,18 +1,25 @@
 import React from 'react'
+import { content } from '../config'
 import './Header.css'
 
 const Header = () => {
   return (
     <header className="header">
       <div className="container">
-        <nav className="nav">
+        <div className="header-content">
           <div className="logo">
-            <span className="logo-icon">●</span>
-            <span className="logo-text">Lynkr</span>
+            <span className="logo-dot"></span>
+            {content.header.logo}
           </div>
-     
-          <a href="#signup" className="btn btn-primary">Join the Waitlist</a>
-        </nav>
+          <nav className="nav">
+            {content.header.navigation.map((item, index) => (
+              <a key={index} href="#" className="nav-link">{item}</a>
+            ))}
+          </nav>
+          <button className="btn btn-primary">
+            {content.header.ctaButton}
+          </button>
+        </div>
       </div>
     </header>
   )

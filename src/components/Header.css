@@ -1,15 +1,14 @@
 .header {
-  background: rgba(45, 55, 72, 0.95);
-  backdrop-filter: blur(10px);
+  background-color: #1A202C;
+  padding: 16px 0;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 1rem 0;
 }
 
-.nav {
+.header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,37 +17,42 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 700;
   color: white;
 }
 
-.logo-icon {
-  color: #667eea;
-  font-size: 1.2rem;
+.logo-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #38A169;
+  border-radius: 50%;
+  margin-right: 8px;
 }
 
-.nav-links {
+.nav {
   display: flex;
-  gap: 2rem;
+  gap: 32px;
 }
 
-.nav-links a {
+.nav-link {
   color: white;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 14px;
   font-weight: 500;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  opacity: 1;
+.nav-link:hover {
+  color: #E2E8F0;
 }
 
 @media (max-width: 768px) {
-  .nav-links {
+  .nav {
     display: none;
+  }
+  
+  .header-content {
+    justify-content: space-between;
   }
 }

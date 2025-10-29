@@ -1,107 +1,105 @@
 import React from 'react'
+import { content } from '../config'
 import './TwoWays.css'
 
 const TwoWays = () => {
   return (
     <section className="two-ways section">
       <div className="container">
-        <div className="section-header text-center mb-6">
-          <h2 className="section-title">
-            Two Ways to <span className="highlight">Connect</span>
-          </h2>
-          <p className="section-subtitle">
-            Choose from two experiences, both powered by science and designed to<br />
-            foster authentic connections.
-          </p>
+        <div className="two-ways-header text-center">
+          <h2 className="two-ways-title">{content.twoWays.title}</h2>
+          <p className="two-ways-description">{content.twoWays.description}</p>
         </div>
-        <div className="ways-grid grid grid-2">
-          <div className="way-card lynkr-circle">
-            <div className="way-header">
-              <div className="way-icon">●</div>
-              <h3 className="way-title">Lynkr Circle</h3>
-            </div>
-            <p className="way-description">
-              Join intimate groups of like-minded individuals. Share experiences, 
-              build lasting friendships, and create meaningful connections in a 
-              supportive community environment.
-            </p>
-            <div className="way-features">
-              <div className="feature-item">Small group connections</div>
-              <div className="feature-item">Shared interest matching</div>
-              <div className="feature-item">Community building</div>
-              <div className="feature-item">Event coordination</div>
-            </div>
-            <div className="way-stats">
-              <div className="stat">
-                <div className="stat-number">You</div>
-                <div className="stat-label">Personal</div>
+        <div className="ways-grid">
+          <div className="way-card circle-card">
+            <div className="card-header">
+              <div className="card-icon circle-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                  <circle cx="12" cy="12" r="3" fill="currentColor"/>
+                </svg>
               </div>
-              <div className="stat">
-                <div className="stat-number">Science</div>
-                <div className="stat-label">Research</div>
-              </div>
+              <h3 className="card-title">{content.twoWays.circle.title}</h3>
             </div>
-            <div className="way-progress">
-              <div className="progress-bar">
-                <div className="progress-fill" style={{width: '75%'}}></div>
+            <p className="card-description">{content.twoWays.circle.description}</p>
+            <div className="card-features">
+              {content.twoWays.circle.features.map((feature, index) => (
+                <div key={index} className="feature-item">
+                  <span className="feature-dot"></span>
+                  {feature}
+                </div>
+              ))}
+            </div>
+            <div className="card-stats">
+              <div className="stat-item">
+                <div className="stat-label">Your</div>
+                <div className="stat-value">Circle</div>
               </div>
             </div>
           </div>
           
-          <div className="way-card lynkr-spark">
-            <div className="way-header">
-              <div className="way-icon spark-icon">●</div>
-              <h3 className="way-title">Lynkr Spark</h3>
-            </div>
-            <p className="way-description">
-              Discover one-on-one connections through thoughtful matching. 
-              Build deeper relationships with individuals who share your values, 
-              interests, and relationship goals.
-            </p>
-            <div className="way-features">
-              <div className="feature-item">1:1 meaningful matches</div>
-              <div className="feature-item">Compatibility scoring</div>
-              <div className="feature-item">Conversation starters</div>
-              <div className="feature-item">Relationship building</div>
-            </div>
-            <div className="way-stats spark-stats">
-              <div className="stat">
-                <div className="stat-number">157</div>
-                <div className="stat-label">Matches</div>
+          <div className="way-card spark-card">
+            <div className="card-header">
+              <div className="card-icon spark-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z" fill="currentColor"/>
+                </svg>
               </div>
-              <div className="stat">
-                <div className="stat-number">4</div>
-                <div className="stat-label">Active</div>
-              </div>
-              <div className="stat">
-                <div className="stat-number">18</div>
-                <div className="stat-label">Conversations</div>
-              </div>
+              <h3 className="card-title">{content.twoWays.spark.title}</h3>
             </div>
-            <a href="#spark" className="btn btn-primary spark-btn">Join Lynkr Spark</a>
+            <p className="card-description">{content.twoWays.spark.description}</p>
+            <div className="card-stats spark-stats">
+              {content.twoWays.spark.stats.map((stat, index) => (
+                <div key={index} className="stat-number">
+                  {stat}
+                </div>
+              ))}
+            </div>
+            <div className="card-features">
+              {content.twoWays.spark.features.map((feature, index) => (
+                <div key={index} className="feature-item">
+                  <span className="feature-dot"></span>
+                  {feature}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         
-        <div className="bottom-features grid grid-3">
-          <div className="bottom-feature">
-            <div className="bottom-icon">📊</div>
-            <h4>Algorithmic Matching</h4>
-            <p>Advanced compatibility algorithms</p>
-          </div>
-          <div className="bottom-feature">
-            <div className="bottom-icon">🔒</div>
-            <h4>Privacy First</h4>
-            <p>Your data stays secure and private</p>
-          </div>
-          <div className="bottom-feature">
-            <div className="bottom-icon">💬</div>
-            <h4>Conversation Starters</h4>
-            <p>Meaningful prompts to break the ice</p>
-          </div>
-          <div className="bottom-feature">
-            <div className="bottom-icon">🎯</div>
-            <h4>Intention Matching</h4>
-            <p>Connect based on relationship goals</p>
+        <div className="ways-bottom">
+          <div className="bottom-features">
+            <div className="bottom-feature">
+              <div className="bottom-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <span>Scientifically Backed Matching</span>
+            </div>
+            <div className="bottom-feature">
+              <div className="bottom-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.27 18.6 15.36 13.45 20.03L12 21.35Z" fill="currentColor"/>
+                </svg>
+              </div>
+              <span>Meaningful Connections</span>
+            </div>
+            <div className="bottom-feature">
+              <div className="bottom-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="currentColor"/>
+                </svg>
+              </div>
+              <span>Privacy-First Design</span>
+            </div>
+            <div className="bottom-feature">
+              <div className="bottom-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                </svg>
+              </div>
+              <span>Premium Experience</span>
+            </div>
           </div>
         </div>
       </div>

@@ -1,23 +1,26 @@
 import React from 'react'
+import { content } from '../config'
 import './Hero.css'
 
 const Hero = () => {
   return (
     <section className="hero">
-      <div className="hero-background"></div>
       <div className="container">
         <div className="hero-content">
           <h1 className="hero-title">
-            The Science of<br />
-            <span className="hero-highlight">Real Connection.</span>
+            {content.hero.title}<br />
+            <span className="hero-subtitle">{content.hero.subtitle}</span>
           </h1>
-          <p className="hero-subtitle">
-            We don't build apps. We build bridges — powered by<br />
-            research, design and the authentic human connection.
+          <p className="hero-description">
+            {content.hero.description}
           </p>
           <div className="hero-buttons">
-            <a href="#learn" className="btn btn-primary">Learn more</a>
-            <a href="#demo" className="btn btn-secondary">Get a demo</a>
+            <button className="btn btn-primary">
+              {content.hero.primaryButton}
+            </button>
+            <button className="btn btn-outline">
+              {content.hero.secondaryButton}
+            </button>
           </div>
         </div>
       </div>

@@ -1,28 +1,21 @@
 import React from 'react'
+import { content } from '../config'
 import './WhatIsLynkr.css'
 
 const WhatIsLynkr = () => {
   return (
     <section className="what-is-lynkr section">
       <div className="container">
-        <div className="section-header text-center mb-6">
-          <h2 className="section-title">
-            What is <span className="highlight">Lynkr</span>
-          </h2>
-          <p className="section-subtitle">
-            A research-driven connection platform for<br />
-            authentic human relationships.
-          </p>
-        </div>
-        <div className="content-wrapper">
-          <p className="description">
-            Unlike social media platforms that focus on likes and followers, Lynkr is designed to 
-            facilitate meaningful connections. Every interaction is a step toward building authentic 
-            relationships that matter.
-          </p>
-          <div className="action-buttons">
-            <a href="#features" className="btn btn-outline">Explore the features</a>
-            <a href="#demo" className="btn-link">Learn more about Lynkr</a>
+        <div className="what-is-content">
+          <div className="what-is-text">
+            <div className="section-label">About</div>
+            <h2 className="what-is-title">{content.whatIsLynkr.title}</h2>
+            <p className="what-is-subtitle">{content.whatIsLynkr.subtitle}</p>
+            <p className="what-is-description">{content.whatIsLynkr.description}</p>
+            <div className="what-is-buttons">
+              <button className="btn btn-primary">Learn More About Us</button>
+              <button className="btn btn-secondary">Get Started Today</button>
+            </div>
           </div>
         </div>
       </div>

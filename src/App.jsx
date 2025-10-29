@@ -4,11 +4,10 @@ import Hero from './components/Hero'
 import WhatIsLynkr from './components/WhatIsLynkr'
 import HowItWorks from './components/HowItWorks'
 import LynkrCore from './components/LynkrCore'
-import Intelligence from './components/Intelligence'
+import ConnectionPowered from './components/ConnectionPowered'
 import TwoWays from './components/TwoWays'
 import JoinMovement from './components/JoinMovement'
-import './App.css'
-
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -18,10 +17,10 @@ function App() {
       <WhatIsLynkr />
       <HowItWorks />
       <LynkrCore />
-      <Intelligence />
+      <ConnectionPowered />
       <TwoWays />
       <JoinMovement />
-  
+      <Footer />
     </div>
   )
 }

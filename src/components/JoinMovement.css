@@ -1,85 +1,97 @@
 .join-movement {
-  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  background: linear-gradient(135deg, #1A202C 0%, #2D3748 100%);
   color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.join-movement .section-title {
-  color: white;
+.join-movement::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1920');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 1;
 }
 
-.join-movement .section-subtitle {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.signup-form-container {
+.movement-content {
+  position: relative;
+  z-index: 2;
   max-width: 600px;
-  margin: 0 auto 4rem;
+  margin: 0 auto;
 }
 
-.signup-form {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 3rem;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.movement-title {
+  font-size: 2.8rem;
+  margin-bottom: 24px;
+}
+
+.movement-description {
+  font-size: 1.2rem;
+  color: #E2E8F0;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.movement-form {
+  margin-bottom: 60px;
 }
 
 .form-row {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
 }
 
-.form-input,
-.form-select {
+.form-input {
   flex: 1;
-  padding: 1rem;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.05);
+  min-width: 200px;
+  padding: 12px 16px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
   color: white;
-  font-size: 1rem;
+  font-size: 14px;
   transition: border-color 0.3s ease;
 }
 
 .form-input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.7);
 }
 
-.form-input:focus,
-.form-select:focus {
+.form-input:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
-.full-width {
+.form-submit {
   width: 100%;
-}
-
-.form-select {
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: white;
+  color: #2D3748;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.form-select option {
-  background: #2d3748;
-  color: white;
-}
-
-.submit-btn {
-  width: 100%;
-  padding: 1.2rem;
-  font-size: 1.1rem;
-  margin-top: 1rem;
+.form-submit:hover {
+  background-color: #E2E8F0;
 }
 
 .movement-stats {
-  text-align: center;
-}
-
-.stats-grid {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  gap: 60px;
   flex-wrap: wrap;
 }
 
@@ -87,32 +99,34 @@
   text-align: center;
 }
 
-.stat-number {
-  font-size: 2.5rem;
+.stat-value {
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #667eea;
-  margin-bottom: 0.5rem;
+  color: white;
+  margin-bottom: 8px;
 }
 
 .stat-label {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1rem;
+  font-size: 14px;
+  color: #E2E8F0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 @media (max-width: 768px) {
-  .signup-form {
-    padding: 2rem;
+  .movement-title {
+    font-size: 2.2rem;
   }
   
   .form-row {
     flex-direction: column;
   }
   
-  .stats-grid {
-    gap: 2rem;
+  .form-input {
+    min-width: auto;
   }
   
-  .stat-number {
-    font-size: 2rem;
+  .movement-stats {
+    gap: 40px;
   }
 }
