@@ -63,7 +63,11 @@ const TwoWays = () => {
             <div className="card-stats spark-stats">
               {content.twoWays.spark.stats.map((stat, index) => (
                 <div key={index} className="stat-number">
-                  {stat}
+                  {stat.split(" ")[0]}<br/>
+                  <span>
+                   {stat.split(" ")[1]}
+                  </span>
+                 
                 </div>
               ))}
             </div>

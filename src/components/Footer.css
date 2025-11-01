@@ -38,7 +38,7 @@
 }
 
 .footer-link {
-  color: #E2E8F0;
+  color: #97958c;
   text-decoration: none;
   font-size: 14px;
   transition: color 0.3s ease;
@@ -61,7 +61,7 @@
   align-items: center;
   font-size: 18px;
   font-weight: 700;
-  color: white;
+  color: #97958c;
 }
 
 .logo-dot {
@@ -73,7 +73,7 @@
 }
 
 .footer-copyright {
-  color: #A0AEC0;
+  color: #97958c;
   font-size: 14px;
 }
 
