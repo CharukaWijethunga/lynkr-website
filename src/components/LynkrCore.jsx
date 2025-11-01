@@ -7,7 +7,7 @@ const LynkrCore = () => {
     <section className="lynkr-core section">
       <div className="container">
         <div className="core-content">
-          <h2 className="core-title">{content.lynkrCore.title}</h2>
+          <h2 className="core-title">{content.lynkrCore.title1}<span className='hero-subtitle'>{content.lynkrCore.title2}</span></h2>
           <p className="core-description">{content.lynkrCore.description}</p>
           <div className="core-visual">
             <div className="core-circle">

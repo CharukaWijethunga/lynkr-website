@@ -30,19 +30,30 @@
 
 .hero-title {
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 24px;
   line-height: 1.1;
 }
 
 .hero-subtitle {
-  color: #E2E8F0;
-  font-weight: 300;
+  font-weight: 600; /* Your original font-weight */
+  
+  /* 1. Set the background as a 3-color linear gradient */
+  background: linear-gradient(to right, #506c74, #a1815a, #506c74); 
+  /* Replace with your 3 desired colors */
+
+  /* 2. Clip the background to be visible only where the text is */
+  -webkit-background-clip: text;  /* For Safari/Chrome */
+  background-clip: text;
+
+  /* 3. Make the text color transparent so the background gradient shows */
+  -webkit-text-fill-color: transparent; /* For Safari/Chrome */
+  color: transparent; /* Standard property */
 }
 
 .hero-description {
   font-size: 1.2rem;
-  color: #E2E8F0;
+  color: #aba69a;
   margin-bottom: 40px;
   line-height: 1.6;
 }
@@ -52,6 +63,7 @@
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
+  color: #e8dcc6;
 }
 
 @media (max-width: 768px) {

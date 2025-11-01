@@ -1,7 +1,21 @@
 .what-is-lynkr {
-  background-color: #F5F1E8;
+  background-color: #e8dcc6;
 }
+.hero-subtitle {
+  font-weight: 600; /* Your original font-weight */
+  
+  /* 1. Set the background as a 3-color linear gradient */
+  background: linear-gradient(to right, #506c74, #a1815a, #506c74); 
+  /* Replace with your 3 desired colors */
 
+  /* 2. Clip the background to be visible only where the text is */
+  -webkit-background-clip: text;  /* For Safari/Chrome */
+  background-clip: text;
+
+  /* 3. Make the text color transparent so the background gradient shows */
+  -webkit-text-fill-color: transparent; /* For Safari/Chrome */
+  color: transparent; /* Standard property */
+}
 .what-is-content {
   text-align: center;
   max-width: 800px;

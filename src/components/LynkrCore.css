@@ -1,6 +1,27 @@
 .lynkr-core {
-  background-color: #F5F1E8;
+  background-image: linear-gradient(
+    to bottom,
+    #e8dcc6, /* Color 1: Start at the top (example color: red) */
+    #ffffff, /* Color 2: Middle (example color: yellow) */
+    #e8dcc6  /* Color 3: End at the bottom (example color: cyan) */
+  );
   text-align: center;
+}
+
+.hero-subtitle {
+  font-weight: 600; /* Your original font-weight */
+  
+  /* 1. Set the background as a 3-color linear gradient */
+  background: linear-gradient(to right, #506c74, #a1815a, #506c74); 
+  /* Replace with your 3 desired colors */
+
+  /* 2. Clip the background to be visible only where the text is */
+  -webkit-background-clip: text;  /* For Safari/Chrome */
+  background-clip: text;
+
+  /* 3. Make the text color transparent so the background gradient shows */
+  -webkit-text-fill-color: transparent; /* For Safari/Chrome */
+  color: transparent; /* Standard property */
 }
 
 .core-content {

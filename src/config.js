@@ -10,9 +10,17 @@ export const theme = {
     green: '#38A169',
     blue: '#3182CE',
     orange: '#ED8936',
+
     text: {
       primary: '#2D3748',
       secondary: '#4A5568',
+      lightprimary: '#A0AEC0',
+      lightsecondary: '#CBD5E0',
+
+      radcolor1: '#FF7E5F',
+      gradcolor2: '#FEB47B',
+
+
       light: '#718096',
       white: '#FFFFFF'
     }
@@ -25,18 +33,19 @@ export const theme = {
 export const content = {
   header: {
     logo: 'Lynkr',
-    navigation: ['Why', 'For People', 'Coaching', 'Pricing'],
-    ctaButton: 'Get Started'
+    navigation: ['About', 'How It Works', 'Networking', 'Dating'],
+    ctaButton: 'Join the Waitlist'
   },
   hero: {
     title: 'The Science of',
     subtitle: 'Real Connection',
     description: 'We help build deep, life-long relationships - powered by research, data and the authentic human connection that makes life worth living.',
-    primaryButton: 'Get Started',
-    secondaryButton: 'Learn More'
+    primaryButton: 'Join Waitlist',
+    secondaryButton: 'How It Works'
   },
   whatIsLynkr: {
-    title: 'What is Lynkr',
+    title1: 'What is ',
+    title2: 'Lynkr',
     subtitle: 'A research-driven connector platform for authentic human relationships.',
     description: 'Lynkr incorporates decades of research in social psychology, neuroscience and communication. From research to the science of human connection, we help you build deeper, more meaningful relationships.'
   },
@@ -62,7 +71,8 @@ export const content = {
     ]
   },
   lynkrCore: {
-    title: 'The Lynkr Core',
+    title1: 'The ',
+     title2: 'Lynkr Core',
     description: 'Behind every connection is intention. Lynkr applies psychology, emotion, and algorithms to help people connect in a way that brings out the best in them.'
   },
   connectionPowered: {
@@ -76,7 +86,8 @@ export const content = {
     ]
   },
   twoWays: {
-    title: 'Two Ways to Connect',
+    title: 'Two Ways to ',
+    subtitle: 'Connect',
     description: 'Choose from Lynkr Circle or Lynkr Spark to find the connection style that works best for you.',
     circle: {
       title: 'Lynkr Circle',
@@ -86,12 +97,13 @@ export const content = {
     spark: {
       title: 'Lynkr Spark',
       description: 'Discover new connections based on authentic compatibility and shared values.',
-      stats: ['153 Matches', '4 Deep Connections', '28 Conversations'],
+      stats: ['153 Days', '4 Hours', '28 Minutes'],
       features: ['Authentic matching', 'Value-based connections', 'Quality over quantity', 'Meaningful introductions']
     }
   },
   joinMovement: {
-    title: 'Join the Movement',
+    title: 'Join the ',
+    subtitle:'Movement',
     description: 'Be part of a community that values authentic human connection.',
     form: {
       emailPlaceholder: 'Enter your email',

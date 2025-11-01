@@ -9,7 +9,7 @@ const WhatIsLynkr = () => {
         <div className="what-is-content">
           <div className="what-is-text">
             <div className="section-label">About</div>
-            <h2 className="what-is-title">{content.whatIsLynkr.title}</h2>
+            <h2 className="what-is-title">{content.whatIsLynkr.title1}<span className='hero-subtitle'>{content.whatIsLynkr.title2}</span></h2>
             <p className="what-is-subtitle">{content.whatIsLynkr.subtitle}</p>
             <p className="what-is-description">{content.whatIsLynkr.description}</p>
             <div className="what-is-buttons">

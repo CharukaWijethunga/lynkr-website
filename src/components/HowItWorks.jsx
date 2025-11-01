@@ -10,7 +10,7 @@ const HowItWorks = () => {
           <div className="section-label">Process</div>
           <h2 className="section-title">
             {content.howItWorks.title}<br />
-            <span className="title-accent">{content.howItWorks.subtitle}</span>
+            <span className="hero-subtitle">{content.howItWorks.subtitle}</span>
           </h2>
         </div>
         <div className="steps-grid">

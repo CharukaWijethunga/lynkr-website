@@ -7,7 +7,10 @@ const TwoWays = () => {
     <section className="two-ways section">
       <div className="container">
         <div className="two-ways-header text-center">
-          <h2 className="two-ways-title">{content.twoWays.title}</h2>
+          <h2 className="two-ways-title">{content.twoWays.title}
+
+            <span className='text-gradient'>{content.twoWays.subtitle}</span>
+          </h2>
           <p className="two-ways-description">{content.twoWays.description}</p>
         </div>
         <div className="ways-grid">
@@ -48,18 +51,19 @@ const TwoWays = () => {
               <h3 className="card-title">{content.twoWays.spark.title}</h3>
             </div>
             <p className="card-description">{content.twoWays.spark.description}</p>
-            <div className="card-stats spark-stats">
-              {content.twoWays.spark.stats.map((stat, index) => (
-                <div key={index} className="stat-number">
-                  {stat}
-                </div>
-              ))}
-            </div>
+            
             <div className="card-features">
               {content.twoWays.spark.features.map((feature, index) => (
                 <div key={index} className="feature-item">
                   <span className="feature-dot"></span>
                   {feature}
+                </div>
+              ))}
+            </div>
+            <div className="card-stats spark-stats">
+              {content.twoWays.spark.stats.map((stat, index) => (
+                <div key={index} className="stat-number">
+                  {stat}
                 </div>
               ))}
             </div>

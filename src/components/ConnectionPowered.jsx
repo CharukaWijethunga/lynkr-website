@@ -8,8 +8,11 @@ const ConnectionPowered = () => {
       <div className="container">
         <div className="connection-content">
           <h2 className="connection-title">
-            {content.connectionPowered.title}<br />
-            <span className="title-accent">{content.connectionPowered.subtitle}</span>
+            {content.connectionPowered.title}
+
+            
+            <br />
+            <span className="text-gradient">{content.connectionPowered.subtitle}</span>
           </h2>
           <p className="connection-description">
             {content.connectionPowered.description}
