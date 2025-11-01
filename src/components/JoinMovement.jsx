@@ -137,32 +137,39 @@ const JoinMovement = () => {
             </div>
 
             {/* Card Selection UI */}
-            <div className="card-select-container">
-              <label className="card-select-label">I am interested in:</label>
-              <div className="card-options">
-                <button
-                  type="button" 
-                  className={`card-select-btn ${formData.product === 'Circle' ? 'active' : ''}`}
-                  onClick={() => handleCardSelect('Circle')}
-                >
-                  Circle
-                </button>
-                <button
-                  type="button"
-                  className={`card-select-btn ${formData.product === 'Spark' ? 'active' : ''}`}
-                  onClick={() => handleCardSelect('Spark')}
-                >
-                  Spark
-                </button>
-                <button
-                  type="button"
-                  className={`card-select-btn ${formData.product === 'Both' ? 'active' : ''}`}
-                  onClick={() => handleCardSelect('Both')}
-                >
-                  Both
-                </button>
-              </div>
-            </div>
+<div className="card-select-container">
+  <label className="card-select-label">I am interested in:</label>
+  <div className="card-options">
+  
+    <button
+      type="button" 
+      className={`card-select-btn ${formData.product === 'Circle' ? 'active' : ''}`}
+      onClick={() => handleCardSelect('Circle')}
+    >
+      <span className="card-title">Circle</span>
+      <span className="card-subtitle">Professional Connections</span>
+    </button>
+    
+    <button
+      type="button"
+      className={`card-select-btn ${formData.product === 'Spark' ? 'active' : ''}`}
+      onClick={() => handleCardSelect('Spark')}
+    >
+      <span className="card-title">Spark</span>
+      <span className="card-subtitle">Personal Relationships</span>
+    </button>
+    
+    <button
+      type="button"
+      className={`card-select-btn ${formData.product === 'Both' ? 'active' : ''}`}
+      onClick={() => handleCardSelect('Both')}
+    >
+      <span className="card-title">Both</span>
+      <span className="card-subtitle">Full experience</span>
+    </button>
+    
+  </div>
+</div>
             
             <button 
               type="submit" 

@@ -141,6 +141,63 @@
   flex-wrap: wrap; /* Allows cards to wrap on small screens */
 }
 
+/* --- Add this to your CSS file --- */
+
+/* Common styles for both alerts */
+.form-success-message,
+.form-error-message {
+  width: 100%;
+
+  margin-top: 16px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+.card-select-btn {
+  /* ... your existing styles ... */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  text-align: start;
+  padding: 16px 20px; /* You might need more padding */
+}
+
+.card-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: white ;
+}
+
+.card-subtitle {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #6a6a6a; /* Adjust color to your theme */
+}
+
+/* Make subtitle white when button is active */
+.card-select-btn.active {
+  color: #fff;
+
+}
+/* 🟢 Success Alert Styles */
+.form-success-message {
+
+  color: #096b2c;            /* Dark green text */
+  border-color: #096b2c;    /* Medium green border */
+}
+
+/* 🔴 Error Alert Styles */
+.form-error-message {
+
+  color: #a80a24;            /* Dark red text */
+  border-color: #a80a24;    /* Medium red/pink border */
+}
+
 .card-select-btn {
   /* Reset button styles */
   background: none;
@@ -162,7 +219,7 @@
 }
 
 /* This is the 'active' state for the selected card */
-.card-select-btn.active {
+.card-select-btn.active .card-subtitle .card-title  {
   background-color: var(--primary-color); /* Use your theme's primary color */
   color: white;
   border-color: var(--primary-color);
