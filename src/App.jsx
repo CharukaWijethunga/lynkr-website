@@ -13,13 +13,13 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Hero />
-      <WhatIsLynkr />
-      <HowItWorks />
+      <Hero id=""/>
+      <WhatIsLynkr id="About" />
+      <HowItWorks id="howitworks"/>
       <LynkrCore />
-      <ConnectionPowered />
-      <TwoWays />
-      <JoinMovement />
+      <ConnectionPowered id="networking"/>
+      <TwoWays id="dating" />
+      <JoinMovement id="join" />
       <Footer />
     </div>
   )

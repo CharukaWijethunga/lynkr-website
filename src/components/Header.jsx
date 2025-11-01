@@ -11,11 +11,13 @@ const Header = () => {
             <span className="logo-dot"></span>
             {content.header.logo}
           </div>
-          <nav className="nav">
-            {content.header.navigation.map((item, index) => (
-              <a key={index} href="#" className="nav-link">{item}</a>
-            ))}
-          </nav>
+       <nav className="nav">
+  {content.header.navigation.map((item, index) => (
+    <a key={index} href={item.href} className="nav-link">
+      {item.text}
+    </a>
+  ))}
+</nav>
           <button className="btn btn-primary">
             {content.header.ctaButton}
           </button>

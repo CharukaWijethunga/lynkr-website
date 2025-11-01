@@ -7,7 +7,21 @@ const HowItWorks = () => {
     <section className="how-it-works section">
       <div className="container">
         <div className="section-header text-center">
-          <div className="section-label">Process</div>
+           <div className="feature-badge" style={{ color: "#4A5568" }}>
+              {/* Add this SVG Icon */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="badge-icon"
+              >
+                <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" />
+              </svg>
+
+              <span style={{ color: "#4A5568" }}>Process</span>
+            </div>
           <h2 className="section-title">
             {content.howItWorks.title}<br />
             <span className="hero-subtitle">{content.howItWorks.subtitle}</span>

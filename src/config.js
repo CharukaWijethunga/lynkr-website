@@ -33,8 +33,14 @@ export const theme = {
 export const content = {
   header: {
     logo: 'Lynkr',
-    navigation: ['About', 'How It Works', 'Networking', 'Dating'],
-    ctaButton: 'Join the Waitlist'
+    navigation: [
+    { text: "About", href: "#about" },
+    { text: "How It Works", href: "#howitworks" },
+    { text: "Networking", href: "#networking" },
+    { text: "Dating", href: "#dating" },
+    { text: "Join", href: "#join" }
+  ],
+  ctaButton: 'Join the Waitlist'
   },
   hero: {
     title: 'The Science of',

@@ -35,11 +35,11 @@
 }
 
 .circle-card {
-  border-left: 4px solid #38A169;
+  border-left: 4px solid #31757c;
 }
 
 .spark-card {
-  border-left: 4px solid #E53E3E;
+  border-left: 4px solid #9f5c64;
 }
 
 .card-header {
@@ -49,28 +49,35 @@
 }
 
 .card-icon {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 16px;
+  
 }
 
 .circle-icon {
-  background-color: #F0FFF4;
-  color: #38A169;
+  background-color: #fff;
+  color: #31757c;
 }
 
 .spark-icon {
-  background-color: #FED7D7;
-  color: #E53E3E;
+  background-color: #fff;
+  color: #9f5c64;
 }
 
 .card-title {
   font-size: 1.5rem;
-  color: #2D3748;
+  color: #000;
+  margin: 0;
+}
+
+.card-h2{
+  font-size: 1.2rem;
+  color: #000;
   margin: 0;
 }
 
@@ -82,6 +89,7 @@
 
 .card-features {
   margin-bottom: 24px;
+  margin-left: 24px;
 }
 
 .feature-item {
@@ -134,7 +142,7 @@
 .stat-number {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #E53E3E;
+  color: #9f5c64;
 }
 
 .ways-bottom {
@@ -159,7 +167,7 @@
 
 .bottom-icon {
   margin-right: 8px;
-  color: #38A169;
+  color: #31757c;
 }
 
 @media (max-width: 768px) {
@@ -188,5 +196,89 @@
   .bottom-icon {
     margin-right: 0;
     margin-bottom: 8px;
+  }
+
+  
+}
+
+.delay-icon-container {
+  margin-right: 8px; /* Adds space between the icon and the text */
+  display: inline-flex; /* Helps with vertical alignment */
+  align-items: center;  /* Aligns icon vertically with text */
+  vertical-align: middle; /* Backup alignment */
+  font-size: 0.65rem; /* Adjust size as needed */
+  padding-bottom: 10px;
+}
+
+/* Main container for the feature cards */
+.bottom-features {
+  display: grid;
+  /* Creates 4 columns, or adjust as needed */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 24px; /* Space between the cards */
+  margin-top: 32px; /* Space above the feature section */
+}
+
+/* Individual feature card */
+.bottom-feature {
+  display: flex;
+  flex-direction: column; /* This is key: stacks items vertically */
+  align-items: center;    /* Centers items horizontally */
+  text-align: center;     /* Centers the text */
+
+
+  border-radius: 12px;
+
+}
+
+/* Styles for the icon wrapper */
+.bottom-icon {
+  margin-bottom: 20px; /* Space between icon and title */
+  
+  /* Optional: Give the icon a nice background circle */
+  background-color: #eaf2ff; /* Example: light blue bg */
+  color: #4A5568; /* Example: primary blue color */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-icon svg {
+  width: 28px; /* Making the icon a bit bigger */
+  height: 28px;
+}
+
+/* Title style */
+.bottom-feature-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 8px 0; /* Space between title and description */
+}
+
+/* Description style */
+.bottom-feature-description {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --- Responsive styles for tablets and mobile --- */
+
+@media (max-width: 992px) {
+  .bottom-features {
+    /* 2 columns on tablets */
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 600px) {
+  .bottom-features {
+    /* 1 column on mobile */
+    grid-template-columns: 1fr; 
   }
 }

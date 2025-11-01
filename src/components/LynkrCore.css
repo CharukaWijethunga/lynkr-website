@@ -82,21 +82,39 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  /* --- ADD THESE LINES --- */
+  animation-name: rotate-orbit;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .orbit-1 {
   width: 140px;
   height: 140px;
+
+  /* --- ADD THESE LINES --- */
+  animation-duration: 8s;   /* Fast speed */
+  animation-delay: -2s;    /* Starts 2s into the animation */
 }
 
 .orbit-2 {
   width: 200px;
   height: 200px;
+
+  /* --- ADD THESE LINES --- */
+  animation-duration: 12s;  /* Medium speed */
+  animation-direction: reverse; /* Goes the other way */
+  animation-delay: -6s;     /* Starts 6s into the animation */
 }
 
 .orbit-3 {
   width: 260px;
   height: 260px;
+
+  /* --- ADD THESE LINES --- */
+  animation-duration: 16s;  /* Slow speed */
+  animation-delay: -4s;     /* Starts 4s into the animation */
 }
 
 .orbit-dot {
@@ -151,5 +169,15 @@
   .orbit-3 {
     width: 220px;
     height: 220px;
+  }
+}
+@keyframes rotate-orbit {
+  from {
+    /* Make sure to keep the translate! */
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    /* Make sure to keep the translate! */
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }

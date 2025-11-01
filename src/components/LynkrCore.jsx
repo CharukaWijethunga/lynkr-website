@@ -27,11 +27,13 @@ const LynkrCore = () => {
           </div>
           <div className="core-features">
             <div className="feature-item">
-              <h4>Connection-First Design</h4>
+              <h4>Connection First Design</h4>
+                 <br/>
               <p>Every feature is built to foster authentic human connections</p>
             </div>
             <div className="feature-item">
-              <h4>Research-Based Approach</h4>
+              <h4>Research Based Approach</h4>
+              <br/>
               <p>Grounded in decades of social psychology and neuroscience research</p>
             </div>
           </div>

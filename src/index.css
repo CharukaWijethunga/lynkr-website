@@ -32,7 +32,7 @@ body {
 .btn {
   display: inline-block;
   padding: 12px 24px;
-  border-radius: 6px;
+  border-radius: 40px;
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
@@ -63,8 +63,8 @@ body {
 
 .btn-outline {
   background-color: transparent;
-  color: white;
-  border: 2px solid white;
+  color: #e8dcc6;
+  border: 2px solid #e8dcc6;
 }
 
 .btn-outline:hover {
@@ -129,4 +129,30 @@ p {
   .section {
     padding: 60px 0;
   }
+}
+
+/* Update your existing .feature-badge rule */
+.feature-badge {
+  /* Use inline-flex to make the badge wrap its content */
+  display: inline-flex;
+  
+  /* Align the icon and text vertically */
+  align-items: center;
+  
+  /* Add space between the icon and the text */
+  gap: 8px; 
+
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 400;
+  border: 1px solid #a1815a;
+  margin-bottom: 24px;
+}
+
+/* Optional: Add this class for the icon */
+.badge-icon {
+  flex-shrink: 0; /* Prevents the icon from shrinking */
 }

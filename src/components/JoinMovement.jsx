@@ -104,6 +104,21 @@ const JoinMovement = () => {
       
           <div className="container">
         <div className="movement-content">
+             <div className="feature-badge">
+            {/* Add this SVG Icon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="badge-icon"
+            >
+              <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" />
+            </svg>
+
+            <span>Limited Early Access</span>
+          </div>
           <h2 className="movement-title">{content.joinMovement.title}
             <span className='text-gradient'>
               {content.joinMovement.subtitle}
