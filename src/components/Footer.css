@@ -74,7 +74,12 @@
 
 .footer-copyright {
   color: #97958c;
-  font-size: 14px;
+  font-size: 12px;
+}
+
+.love {
+  color: #ff0000;
+
 }
 
 @media (max-width: 768px) {

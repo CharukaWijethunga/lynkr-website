@@ -121,7 +121,7 @@ export const content = {
     sections: [
       {
         title: 'Lynkr',
-        links: ['About', 'Careers', 'Press', 'Blog']
+        links: ['Intelligent human connection powered by psychometric science.']
       },
       {
         title: 'Legal',

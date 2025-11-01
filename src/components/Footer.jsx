@@ -22,12 +22,12 @@ const Footer = () => {
             ))}
           </div>
           <div className="footer-bottom">
-            <div className="footer-logo">
-              <span className="logo-dot"></span>
-              Lynkr
-            </div>
+          
             <div className="footer-copyright">
               © 2025 Lynkr. All rights reserved.
+            </div>
+              <div className="footer-copyright">
+             Made with <span className='love'>♥</span> for meaningful connections
             </div>
           </div>
         </div>

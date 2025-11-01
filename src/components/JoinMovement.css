@@ -108,11 +108,66 @@
 
 .stat-label {
   font-size: 14px;
-  color: #E2E8F0;
+  color: #84837d;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
+/* --- Add this to your JoinMovement.css --- */
+
+.card-select-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.card-select-label {
+  display:flex ;
+  align-self: start;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #84837d; /* Adjust color to match your theme */
+}
+
+.conditions{
+
+  font-size: 0.6rem;
+  color: #84837d;
+  margin-top: 12px;
+}
+.card-options {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap; /* Allows cards to wrap on small screens */
+}
+
+.card-select-btn {
+  /* Reset button styles */
+  background: none;
+  border: 2px solid ; /* Adjust color */
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #84837d; /* Adjust color */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  flex-grow: 1; /* Makes buttons grow to fill space */
+  text-align: center;
+}
+
+.card-select-btn:hover {
+  background-color: #2D3748; /* Adjust color */
+  border-color: white; /* Adjust color */
+}
+
+/* This is the 'active' state for the selected card */
+.card-select-btn.active {
+  background-color: var(--primary-color); /* Use your theme's primary color */
+  color: white;
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 @media (max-width: 768px) {
   .movement-title {
     font-size: 2.2rem;
