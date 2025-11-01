@@ -14,7 +14,7 @@ export const theme = {
     text: {
       primary: '#2D3748',
       secondary: '#4A5568',
-      lightprimary: '#A0AEC0',
+      lightprimary: '#006effff',
       lightsecondary: '#CBD5E0',
 
       radcolor1: '#FF7E5F',
